@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane prefHeight="53.0" prefWidth="638.0"
+	style="-fx-background-color: #355C7D" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SampleController">
+	<children>
+		<ImageView layoutX="48.0" layoutY="12.0"
+			fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="ak.jpg" />
+			</image>
+		</ImageView>
+
+		<TextField fx:id="height" layoutX="198.0" layoutY="105.0" />
+		<TextField fx:id="width" layoutX="198.0" layoutY="152.0" />
+		<Label layoutX="45.0" layoutY="109.0" prefHeight="17.0"
+			prefWidth="163.0" text="A szoba magassága:" textFill="WHITE" />
+		<Label layoutX="45.0" layoutY="156.0" prefHeight="17.0"
+			prefWidth="163.0" text="A szoba szélessége:" textAlignment="CENTER"
+			textFill="WHITE" />
+		<Label layoutX="45.0" layoutY="200.0" prefHeight="17.0"
+			prefWidth="163.0" text="A szoba hossza:" textFill="WHITE" />
+		<TextField fx:id="length" layoutX="198.0" layoutY="196.0" />
+		<TextField fx:id="toLift" layoutX="198.0" layoutY="241.0" />
+		<Label layoutX="45.0" layoutY="245.0" prefHeight="17.0"
+			prefWidth="163.0" text="Az emelés mértéke:" textFill="WHITE" />
+		<Label layoutX="354.0" layoutY="156.0" text="m" textFill="WHITE" />
+		<Label layoutX="354.0" layoutY="109.0" text="m" textFill="WHITE" />
+		<Label layoutX="354.0" layoutY="245.0" text="mm" textFill="WHITE" />
+		<Label layoutX="354.0" layoutY="200.0" text="m" textFill="WHITE" />
+		<Button id="button" fx:id="button" layoutX="304.0" layoutY="289.0"
+			mnemonicParsing="false" onAction="#buttonAction" text="Számol"
+			textFill="#355C7D" />
+		<Button id="reset" fx:id="reset" layoutX="364.0" layoutY="289.0"
+			mnemonicParsing="false" onAction="#resetTextFields" text="C"
+			textFill="red" />
+		<Label fx:id="buttonPressed" layoutX="240.0" layoutY="319.0"
+			prefHeight="30.0" prefWidth="250.0" textFill="WHITE" />
+		<CheckBox fx:id="decoratorCB" layoutX="46.0" layoutY="359.0"
+			mnemonicParsing="false" text="Tapéta" textFill="WHITE" />
+		<CheckBox fx:id="concreteCB" layoutX="113.0" layoutY="359.0"
+			mnemonicParsing="false" text="Beton" textFill="WHITE" />
+		<CheckBox fx:id="parquetCB" layoutX="178.0" layoutY="359.0"
+			mnemonicParsing="false" text="Parketta" textFill="WHITE" />
+		<CheckBox fx:id="foilCB" layoutX="256.0" layoutY="359.0"
+			mnemonicParsing="false" text="Fóliázás" textFill="WHITE" />
+		<CheckBox fx:id="airspaceCB" layoutX="326.0" layoutY="359.0"
+			mnemonicParsing="false" text="Légkondi" textFill="WHITE" />
+		<TabPane fx:id="totalCB" style="-fx-background-color: #355C7D"
+			layoutX="39.0" layoutY="400.0" prefHeight="207.0" prefWidth="340.1"
+			tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab id="tab1" text="Tapéta">
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0" />
+						<Label fx:id="decoratorLabel" layoutX="454.0" layoutY="200.0"
+							text="" textFill="WHITE" />
+					</content>
+				</Tab>
+				<Tab id="tab2" text="Beton">
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0" />
+						<Label fx:id="concreteLabel" layoutX="454.0" layoutY="200.0"
+							text="" textFill="WHITE" />
+					</content>
+				</Tab>
+				<Tab id="tab3" text="Parketta">
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0" />
+						<Label fx:id="parquetLabel" layoutX="454.0" layoutY="200.0"
+							text="" textFill="WHITE" />
+					</content>
+				</Tab>
+				<Tab id="tab4" text="Fóliázás">
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0" />
+						<Label fx:id="foilLabel" layoutX="454.0" layoutY="200.0"
+							text="" textFill="WHITE" />
+					</content>
+				</Tab>
+				<Tab id="tab5" text="Légkondi">
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0" />
+						<Label fx:id="airspaceLabel" layoutX="454.0" layoutY="200.0"
+							text="" textFill="WHITE" />
+					</content>
+				</Tab>
+				<Tab id="tab6" text="Összesen">
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0" />
+						<Label fx:id="totalLabel" layoutX="454.0" layoutY="200.0"
+							text="" textFill="WHITE" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</Pane>
